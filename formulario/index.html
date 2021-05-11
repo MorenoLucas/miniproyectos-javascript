@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMULARIO</title>
+  </head>
+  <body>
+    <div class="formulario">
+      <h1>Formulario de Registro</h1>
+
+      <form name="formulario">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            class="form-control"
+            aria-describedby="emailHelp"
+            type="email"
+            id="email"
+            required
+            placeholder="Email"
+            onkeyup="validar(this)"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >Tiene que ser mayor a 3 caracteres.</small
+          >
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            required
+            placeholder="Contraseña"
+            onkeyup="validar1(this)"
+          />
+          <small id="passHelp" class="form-text text-muted"
+            >Tiene que ser mayor a 3 caracteres.</small
+          >
+          <input
+            class="form-control"
+            type="password"
+            id="password2"
+            required
+            placeholder="Repite la contraseña "
+          />
+        </div>
+        <select
+          name="provincia"
+          id="provincia"
+          onclick="cargar_provincias()"
+        ></select>
+        <button type="button" onclick="crear()" class="btn btn-light">
+          Crear Usuario
+        </button>
+      </form>
+    </div>
+
+    <div class="login">
+      <h1>Login</h1>
+
+      <form name="login">
+        <label for="">Email</label>
+        <input
+          class="form-control"
+          type="email"
+          id="mail"
+          required
+          placeholder="Email"
+          onkeydown="validar2(this)"
+        />
+        <small id="mailHelp" class="form-text text-muted"
+          >Tiene que ser mayor a 3 caracteres.</small
+        >
+        <label>Contraseña</label>
+        <input
+          class="form-control"
+          type="password"
+          id="pass"
+          required
+          placeholder="Contraseña"
+          onkeydown="validar3(this)"
+        />
+        <small id="contraHelp" class="form-text text-muted"
+          >Tiene que ser mayor a 3 caracteres.</small
+        >
+        <button type="button" onclick="iniciar()" class="btn btn-light">
+          Iniciar
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="/miniproyectos/miniproyectos-javascript/formulario/formulario.js"></script>
+</html>
